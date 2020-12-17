@@ -9,12 +9,41 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
     width: auto;
     height: auto;
-    top: 200px;
+    top: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+}
+
+#secret-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#link-to-code {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#kyle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#creepyKyle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 /* position: absolute

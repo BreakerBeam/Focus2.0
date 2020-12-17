@@ -7,7 +7,7 @@ if (document.readyState === "loading") {
   || window.location.href.slice(0,21) === 'https://www.w3schools' 
   || window.location.href.slice(0,21) === 'https://stackoverflow' 
   || window.location.href.slice(0,18) === 'https://www.google' 
-  || window.location.href.slice(0,14) === 'https://github'){
+  || window.location.href.slice(0,14) === 'https://github') {
     //do nothing
   } else {
     //alert('test')
@@ -16,9 +16,8 @@ if (document.readyState === "loading") {
     const div = document.createElement('div');
     const kyle = document.createElement('img');
     const button = document.createElement('button');
-
     const creepyKyle = document.createElement('img');
-    const link = document.createElement('a');
+    const link = document.createElement('button');
 
     div.setAttribute('id', 'codesmith-popup');
 
@@ -40,15 +39,16 @@ if (document.readyState === "loading") {
     creepyKyle.setAttribute('src', 'https://i.giphy.com/media/n30PYbpxNVoo61pswJ/giphy.webp');
 
     link.setAttribute('id', 'link-to-code')
-    link.setAttribute('href', 'https://codesmith.io/')
+    
+    link.setAttribute('onclick', "location.href = 'https://codesmith.io/';")
     link.innerHTML = "Okay, tell me where I should go to learn"
 
     setTimeout( () => {
-        body.insertAdjacentElement('afterbegin',div);
+        body.insertAdjacentElement('afterbegin', div);
         div.appendChild(creepyKyle);
         div.appendChild(button);
         chrome.runtime.sendMessage({msg: 'eye'})
-    }, 1000);
+    }, 500);
 
     // function buttonFunc() {
     //   creepyKyle.remove();
