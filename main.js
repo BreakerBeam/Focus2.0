@@ -10,7 +10,6 @@ if (document.readyState === "loading") {
   || window.location.href.slice(0,14) === 'https://github') {
     //do nothing
   } else {
-    //alert('test')
 
     const body = document.querySelector('body');
     const div = document.createElement('div');
@@ -26,7 +25,6 @@ if (document.readyState === "loading") {
 
     button.setAttribute('id', 'secret-button')
     button.innerHTML = "Please Kyle, just let me look at silly memes"
-    //button.setAttribute('onclick', 'buttonFunc()')
     button.onclick = () => {
       creepyKyle.remove();
       button.remove();
@@ -50,43 +48,6 @@ if (document.readyState === "loading") {
         chrome.runtime.sendMessage({msg: 'eye'})
     }, 500);
 
-    // function buttonFunc() {
-    //   creepyKyle.remove();
-    //   button.remove();
-    //   div.appendChild(kyle);
-    //   div.appendChild(link);
-    //   chrome.runtime.sendMessage({msg: 'get'})
-    // }
   }
 }
-
-// // audio.muted = true;
-
-// const consoleLog = () => { 
-//   console.log(window.location.href);
-//   let string = window.location.href;
-//   console.log(string.substring(0, 21));
-// }
-
-// const playAudio = () => {
-//   const audio = new Audio('get-back-to-work.mp3');
-//   // audio.muted = true;
-//   audio.play();
-//   // document.getElementById('ID').play();
-//   // document.removeEventListener('click', musicPlay);
-// }
-
-// if (document.readyState === "loading") { 
-//   document.addEventListener("DOMContentLoaded", doSomething);
-// } else {
-//   //  https://codesmith.io // 20
-//   if (window.location.href !== 'https://codesmith.io/') {
-//   consoleLog();
-//   alert('test');
-//   //audio.muted = false;
-//   document.addEventListener('click', playAudio)
-// //  playAudio();
-//    // IF you get a console.log - then you're not on codesmith    
-//   }
-// }
 
